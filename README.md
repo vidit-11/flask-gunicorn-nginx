@@ -38,7 +38,7 @@ After=network.target
 [Service]
 User=<user>
 Group=www-data
-WorkingDirectory=/home/<user>/hike
+WorkingDirectory=/home/<user>/<app_folder_name>
 Environment="PATH=/home/<user>/<app_folder_name>/env/bin"
 ExecStart=/home/<user>/<app_folder_name>/env/bin/gunicorn --workers 3 --bind unix:<app_name>.sock -m 007 wsgi:<app_name>
 
