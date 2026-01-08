@@ -1,0 +1,13 @@
+[Unit]
+Description=Gunicorn instance to serve peak Flask app
+After=network.target
+
+[Service]
+User=vidit
+Group=www-data
+WorkingDirectory=/home/vidit/hike
+Environment="PATH=/home/vidit/hike/env/bin"
+ExecStart=/home/vidit/hike/env/bin/gunicorn --workers 3 --bind unix:peak.sock -m 007 wsgi:app
+
+[Install]
+WantedBy=multi-user.target
