@@ -7,8 +7,8 @@ This repository contains a simple Flask application and a comprehensive guide fo
 Create a dedicated user and configure SSH access.
 
 ```bash
-sudo adduser deployuser
-sudo usermod -aG sudo deployuser
+sudo adduser <user>
+sudo usermod -aG sudo <user>
 # Edit sshd_config if you need password login
 sudo nano /etc/ssh/sshd_config # Set PasswordAuthentication yes
 sudo systemctl restart sshd
