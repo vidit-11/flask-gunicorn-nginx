@@ -32,7 +32,7 @@ Create a service file at `/etc/systemd/system/<app_name>.service`:
 
 ```ini
 [Unit]
-Description=Gunicorn instance to serve peak Flask app
+Description=Gunicorn instance to serve Flask app
 After=network.target
 
 [Service]
